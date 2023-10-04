@@ -12,24 +12,23 @@ const computerShips = [];
 
 module.exports = Ship;
 
-/**
- * Is the function that uses the constructor for the class of Ship
- * @param {string} name 
- * @param {number} num 
- */
-function newShip(name, num) {
-  const shipName = name;
-  const hitPoints = num;
-  const newShip = new Ship(shipName, hitPoints);
-  playerShips.push(newShip);
-  computerShips.push(newShip);
+const shipNames = ['Carrier', 'Battleship', 'Cruiser', 'Submarine', 'Patrol boat'];
+const shipLengths = [5, 4, 3, 3, 2];
+
+/** This for loop is for creating the for the game and adding it to both the player and computer */
+for (let i = 0; i < shipNames.length; i += 1) {
+  const buildShip = new Ship(shipNames[i], shipLengths[i]);
+  playerShips.push(buildShip);
+  computerShips.push(buildShip);
 }
 
-newShip('Carrier', 5);
-newShip('Battleship', 4);
-newShip('Cruiser', 3);
-newShip('Submarine', 3);
-newShip('Patrol boat', 2);
+function gotHit(num) {
+  if (playerShips[num].hits <= playerShips[num].hitPoints) {
+    playerShips[num].hits ++;
+    if (playerShips[num].hits === playerShips[num].hitPoints) {
+      playerShips[num].isSunk = true;
+    }
+  }
+}
 
-console.log(playerShips);
-console.log(computerShips);
+module.exports = gotHit();
