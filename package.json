@@ -1,0 +1,26 @@
+{
+  "name": "top-battleship",
+  "version": "1.0.0",
+  "description": "This is my submission for creating a Battleship game clone using HTML, CSS, JS, and Jest. This is mainly used to learn TDD (Test Driven Development).",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustSomeGuyy/TOP-BattleShip.git"
+  },
+  "author": "Tyler Wolfe (JustSomeGuyy)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustSomeGuyy/TOP-BattleShip/issues"
+  },
+  "homepage": "https://github.com/JustSomeGuyy/TOP-BattleShip#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "jest": "^29.7.0"
+  }
+}
